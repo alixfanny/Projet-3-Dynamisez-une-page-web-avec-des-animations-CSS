@@ -1,0 +1,16 @@
+body {
+  font-family: "Roboto";
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#main-header {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#main-header img {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */

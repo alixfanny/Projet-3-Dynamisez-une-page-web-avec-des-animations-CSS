@@ -1,0 +1,29 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiaire: #99E2D0;
+$background: #f7f7f7;
+$background-bis: #eaeaea;
+$shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+$none : 0px;
+
+@mixin position {
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    font-family: 'Roboto';
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#main-header{
+    @include position();
+    padding: 30px $none;
+    box-shadow: $shadow;
+    position: relative;
+
+    img{
+        width: 50%;
+    }
+}
