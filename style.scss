@@ -142,6 +142,12 @@ body{
     @include form-card();
     width: 93%;
     margin-left: 15px;
+
+    a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .card__image{
