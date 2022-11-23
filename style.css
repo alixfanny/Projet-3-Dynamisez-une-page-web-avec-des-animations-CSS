@@ -15,4 +15,26 @@ body {
 #main-header img {
   width: 50%;
   padding-right: 50px;
+}
+
+#main-footer {
+  background-color: #353535;
+  color: white;
+  padding: 25px;
+}
+#main-footer .text-logo {
+  font-family: "Shrikhand", cursive;
+}
+#main-footer .position {
+  display: flex;
+  align-items: baseline;
+}
+#main-footer p {
+  margin: 5px;
+}
+#main-footer .position p {
+  padding-left: 10px;
+}
+#main-footer .text-footer {
+  padding-top: 10px;
 }/*# sourceMappingURL=style.css.map */

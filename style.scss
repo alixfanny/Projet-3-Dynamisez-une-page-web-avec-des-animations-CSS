@@ -3,8 +3,11 @@ $secondary: #FF79DA;
 $tertiaire: #99E2D0;
 $background: #f7f7f7;
 $background-bis: #eaeaea;
+$background-footer:#353535;
 $shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
 $none : 0px;
+$align: baseline;
+$space: 10px;
 
 @mixin position-header {
     display: flex;
@@ -27,5 +30,32 @@ body{
     img{
         width: 50%;
         padding-right: 50px;
+    }
+}
+
+#main-footer{
+    background-color: $background-footer;
+    color: white;
+    padding: 25px;
+
+    .text-logo{
+        font-family: 'Shrikhand', cursive;
+    }
+
+    .position{
+        display: flex;
+        align-items: $align;
+    }
+
+    p{
+        margin: 5px;
+    }
+
+    .position p{
+        padding-left: $space;
+    }
+
+    .text-footer{
+        padding-top: $space;
     }
 }
