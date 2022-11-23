@@ -5,14 +5,28 @@ $background: #f7f7f7;
 $background-bis: #eaeaea;
 $background-footer:#353535;
 $shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+$raduis: 30px;
+$text: center;
 $none : 0px;
 $align: baseline;
 $space: 10px;
+$raduis: 15px;
 
-@mixin position-header {
+@mixin position {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+}
+
+@mixin text-button {
+    color: white;
+	padding: 15px;
+	font-size: 16px;
+}
+
+@mixin form-card {
+    border-radius: $raduis;
+    box-shadow: $shadow;
 }
 
 body{
@@ -22,7 +36,8 @@ body{
 }
 
 #main-header{
-    @include position-header();
+    @include position();
+    justify-content: space-around;
     padding: 30px $none;
     box-shadow: $shadow;
     position: relative;
@@ -30,6 +45,181 @@ body{
     img{
         width: 50%;
         padding-right: 50px;
+    }
+}
+
+.location{
+    @include position();
+    background-color: $background-bis;
+    align-items: $align;
+
+    i{
+        margin-right: 10px;
+    }
+}
+
+.grid{
+    background-color: $background
+}
+
+.grid-text{
+    text-align: $text;
+    padding: 60px;
+
+    p{
+        padding: 20px;
+    }
+}
+
+.button{
+    background: linear-gradient(to bottom right, $primary, $secondary);
+    border-radius: $raduis;
+    box-shadow: $shadow;
+    @include text-button();
+    border: none;
+}
+
+.title__head{
+    padding: 40px 20px;
+}
+
+.card{
+    @include position();
+    margin-bottom: 30px;
+    position: relative;
+
+    .card__number{
+        background-color: $primary;
+        border-radius: 50%;
+        color: white;
+	    padding: $none 5px;
+        position: absolute;
+        left: 45px;
+        top: 10px;
+    }
+
+    .card-forme{
+        @include position();
+        align-items: $align;
+        background-color: $background;
+        width: 70%;
+        @include form-card();
+    }
+
+    .card-forme-color{
+        background-color: #f5edff;
+    }
+
+    .card__number p{
+        margin: 5px;
+    }
+
+    .card__icon{
+        color: #7e7e7e;
+        margin-right: 10px;
+    }
+
+    .icon-color{
+        color: $primary;
+    }
+
+}
+
+.card-restaurant{
+    flex-direction: column;
+    @include form-card();
+    width: 93%;
+    margin-left: 15px;
+}
+
+.card__image{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: $raduis $raduis 0px 0px;
+
+    img{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        
+    }
+}
+
+.card__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+
+    .card__heading{
+        margin: $none;
+        padding-top: 10px;
+    }
+
+    p{
+        margin: $none;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+}
+
+.menu-img{
+    border-radius: $none;
+    overflow: visible;
+}
+
+.menu{
+    background-color: $background;
+    border-radius: 25px;
+    padding-top: 15px;
+
+    .menu-title{
+        font-family: 'Shrikhand', cursive;;
+    }
+
+    .bordure{ 
+        border-bottom: $tertiaire 2px solid ;
+        width: 10%;
+        margin-top: 35px;
+    }
+
+    h2{
+        font-weight: lighter;
+        font-size: 18px;
+        margin: auto;
+    }
+
+    .menu-card{
+        border-radius: $raduis;
+        background-color: #fff;
+        box-shadow: $shadow;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 5px 5px;
+    }
+
+    h3{
+        margin: $none;
+    }
+
+    .menu-text{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p{
+        margin: 5px;
+        font-weight: lighter;
+    }
+
+    .price{
+        font-weight: 600;
     }
 }
 
