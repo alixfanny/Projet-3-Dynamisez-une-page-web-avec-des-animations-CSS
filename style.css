@@ -2,6 +2,7 @@ body {
   font-family: "Roboto";
   margin-right: auto;
   margin-left: auto;
+  margin: 0px;
 }
 
 #main-header {
@@ -31,6 +32,7 @@ body {
 
 .grid {
   background-color: #f7f7f7;
+  padding-bottom: 50px;
 }
 
 .grid-text {
@@ -89,7 +91,8 @@ body {
 }
 .card .card__icon {
   color: #7e7e7e;
-  margin-right: 10px;
+  padding-right: 20px;
+  transform: scale(1.5);
 }
 .card .icon-color {
   color: #9356DC;
@@ -122,6 +125,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-left: 10px;
 }
 .card__content .card__heading {
