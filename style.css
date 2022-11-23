@@ -45,12 +45,13 @@ body {
 
 .button {
   background: linear-gradient(to bottom right, #9356DC, #FF79DA);
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
   color: white;
   padding: 15px;
   font-size: 16px;
   border: none;
+  width: 250px;
 }
 
 .title__head {
@@ -140,7 +141,6 @@ body {
 
 .menu-img {
   border-radius: 0px;
-  overflow: visible;
 }
 
 .menu {
@@ -150,6 +150,13 @@ body {
 }
 .menu .menu-title {
   font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 15px;
+}
+.menu .menu-title i {
+  transform: scale(1.5);
 }
 .menu .bordure {
   border-bottom: #99E2D0 2px solid;
@@ -177,6 +184,7 @@ body {
 .menu .menu-text {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .menu p {
   margin: 5px;
@@ -184,6 +192,14 @@ body {
 }
 .menu .price {
   font-weight: 600;
+}
+
+.btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  padding: 50px 0px;
 }
 
 #main-footer {

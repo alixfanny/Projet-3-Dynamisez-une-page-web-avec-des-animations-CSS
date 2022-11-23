@@ -5,6 +5,7 @@ $background: #f7f7f7;
 $background-bis: #eaeaea;
 $background-footer:#353535;
 $shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+$logo: scale(1.50);
 $raduis: 30px;
 $text: center;
 $none : 0px;
@@ -12,9 +13,15 @@ $align: baseline;
 $space: 10px;
 $raduis: 15px;
 
-@mixin position {
+@mixin position1 {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+@mixin position2 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -29,6 +36,7 @@ $raduis: 15px;
     box-shadow: $shadow;
 }
 
+
 body{
     font-family: 'Roboto';
     margin-right: auto;
@@ -37,7 +45,7 @@ body{
 }
 
 #main-header{
-    @include position();
+    @include position1();
     justify-content: space-around;
     padding: 30px $none;
     box-shadow: $shadow;
@@ -50,7 +58,7 @@ body{
 }
 
 .location{
-    @include position();
+    @include position1();
     background-color: $background-bis;
     align-items: $align;
 
@@ -75,10 +83,11 @@ body{
 
 .button{
     background: linear-gradient(to bottom right, $primary, $secondary);
-    border-radius: $raduis;
+    border-radius: 25px;
     box-shadow: $shadow;
     @include text-button();
     border: none;
+    width: 250px;
 }
 
 .title__head{
@@ -86,7 +95,7 @@ body{
 }
 
 .card{
-    @include position();
+    @include position1();
     margin-bottom: 30px;
     position: relative;
 
@@ -101,7 +110,7 @@ body{
     }
 
     .card-forme{
-        @include position();
+        @include position1();
         align-items: $align;
         background-color: $background;
         width: 70%;
@@ -119,7 +128,7 @@ body{
     .card__icon{
         color: #7e7e7e;
         padding-right: 20px;
-        transform: scale(1.50);
+        transform: $logo;
     }
 
     .icon-color{
@@ -153,9 +162,7 @@ body{
 }
 
 .card__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include position2();
     width: 100%;
     padding-left: $space;
 
@@ -173,7 +180,6 @@ body{
 
 .menu-img{
     border-radius: $none;
-    overflow: visible;
 }
 
 .menu{
@@ -182,7 +188,13 @@ body{
     padding-top: 15px;
 
     .menu-title{
-        font-family: 'Shrikhand', cursive;;
+        font-family: 'Shrikhand', cursive;
+        @include position2();
+        margin: $none 15px;
+    }
+
+    .menu-title i{
+        transform: $logo;
     }
 
     .bordure{ 
@@ -213,8 +225,7 @@ body{
     }
 
     .menu-text{
-        display: flex;
-        justify-content: space-between;
+        @include position2();
     }
 
     p{
@@ -225,6 +236,13 @@ body{
     .price{
         font-weight: 600;
     }
+}
+
+.btn{
+    
+    width: max-content;
+    margin: auto;
+    padding: 50px $none;
 }
 
 #main-footer{
