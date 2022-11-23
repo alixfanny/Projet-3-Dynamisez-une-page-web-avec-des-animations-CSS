@@ -1,0 +1,128 @@
+$card-radius: 25px;
+$card-shadow: 0px 3px 15px rgba(#000, 0.3);
+$card-bg-color: #fff;
+
+
+@mixin card($bg-color: $card-bg-color, $border-radius: $card-radius, $box-shadow: $card-shadow){
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background-color: $bg-color;
+}
+
+.card{
+    @include flex(center, center);
+    @include card();
+    margin-bottom: 30px;
+    position: relative;
+
+    &.card-function{
+        background-color: #f7f7f7;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+
+        .card__number{
+            background-color: $primary;
+            border-radius: 50%;
+            color: white;
+            padding: 0px 10px;
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+
+            p{
+                position: relative;
+                top: -10px;
+            }
+        }
+
+        .card-forme{
+            @include flex(space-evenly, center);
+            background-color: $background;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        .card-forme-color{
+            background-color: #f5edff;
+        }
+    }
+
+    &.card-restaurant{
+        flex-direction: column;
+        width: 93%;
+        margin-left: 15px;
+
+        a{
+            width: 100%;
+            text-decoration: none;
+            color: black;
+        }
+
+        .card__content{
+            @include flex(space-between, center);
+            width: 100%;
+            padding-left: $space;
+        
+            .card__heading{
+                margin: 0px;
+                padding-top: 10px;
+            }
+        
+            p{
+                margin: 0px;
+                padding-top: 5px;
+                padding-bottom: 10px;
+            }
+
+            .card__icon{
+                color: #7e7e7e;
+                padding-right: 20px;
+                transform: $logo;
+            }
+        
+            .icon-color{
+                color: $primary;
+            }
+        }
+    }
+
+    &.menu-card{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 5px 5px;
+        display: block;
+        border-radius: 15px;
+    }
+}
+
+.card__image{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: $raduis $raduis 0px 0px;
+
+    img{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        
+    }
+}
+
+.menu-img{
+    border-radius: 0px;
+}
+
+
+
+
+
+
