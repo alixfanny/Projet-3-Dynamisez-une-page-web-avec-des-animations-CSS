@@ -39,14 +39,31 @@ $card-bg-color: #fff;
         }
 
         .card-forme{
-            @include flex(space-evenly, center);
+            @include flex(flex-start, center);
             background-color: $background;
             border-radius: 15px;
             width: 100%;
+            padding-left: 30px;
         }
 
         .card-forme-color{
             background-color: #f5edff;
+        }
+
+        .icon-color{
+            color: $primary;
+        }
+    }
+
+    .card__icon{
+        color: #7e7e7e;
+        padding-right: 20px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+
+        i{
+            font-size: 20px;
         }
     }
 
@@ -64,7 +81,7 @@ $card-bg-color: #fff;
         .card__content{
             @include flex(space-between, center);
             width: 100%;
-            padding-left: $space;
+            padding-left: 10px;
         
             .card__heading{
                 margin: 0px;
@@ -76,16 +93,6 @@ $card-bg-color: #fff;
                 padding-top: 5px;
                 padding-bottom: 10px;
             }
-
-            .card__icon{
-                color: #7e7e7e;
-                padding-right: 20px;
-                transform: $logo;
-            }
-        
-            .icon-color{
-                color: $primary;
-            }
         }
     }
 
@@ -94,7 +101,7 @@ $card-bg-color: #fff;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
-        padding: 5px 5px;
+        padding: 10px 10px;
         display: block;
         border-radius: 15px;
     }
@@ -105,7 +112,7 @@ $card-bg-color: #fff;
     position: relative;
     width: 100%;
     height: 200px;
-    border-radius: $raduis $raduis 0px 0px;
+    border-radius: 15px 15px 0px 0px;
 
     img{
         position: absolute;
@@ -115,11 +122,24 @@ $card-bg-color: #fff;
         max-width: 100%;
         
     }
+
+    .badge{
+        position: absolute;
+        background-color: #99e2d0;
+        top: 14px;
+        right: 14px;
+        padding: 5px;
+        border-radius: 2px;
+
+
+        p{
+            color: #008766;
+            font-size: 14px;
+            margin: 0px;
+        }
+    }
 }
 
-.menu-img{
-    border-radius: 0px;
-}
 
 
 

@@ -31,14 +31,28 @@
 }
 .card.card-function .card-forme {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f7f7f7;
   border-radius: 15px;
   width: 100%;
+  padding-left: 30px;
 }
 .card.card-function .card-forme-color {
   background-color: #f5edff;
+}
+.card.card-function .icon-color {
+  color: #9356DC;
+}
+.card .card__icon {
+  color: #7e7e7e;
+  padding-right: 20px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+.card .card__icon i {
+  font-size: 20px;
 }
 .card.card-restaurant {
   flex-direction: column;
@@ -66,20 +80,12 @@
   padding-top: 5px;
   padding-bottom: 10px;
 }
-.card.card-restaurant .card__content .card__icon {
-  color: #7e7e7e;
-  padding-right: 20px;
-  transform: scale(1.5);
-}
-.card.card-restaurant .card__content .icon-color {
-  color: #9356DC;
-}
 .card.menu-card {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  padding: 5px 5px;
+  padding: 10px 10px;
   display: block;
   border-radius: 15px;
 }
@@ -98,9 +104,18 @@
   left: 50%;
   max-width: 100%;
 }
-
-.menu-img {
-  border-radius: 0px;
+.card__image .badge {
+  position: absolute;
+  background-color: #99e2d0;
+  top: 14px;
+  right: 14px;
+  padding: 5px;
+  border-radius: 2px;
+}
+.card__image .badge p {
+  color: #008766;
+  font-size: 14px;
+  margin: 0px;
 }
 
 body {
@@ -124,6 +139,9 @@ body {
 }
 #main-header .img-header {
   padding: 0px;
+}
+#main-header a {
+  color: #000;
 }
 
 .location {
@@ -165,12 +183,17 @@ body {
   padding: 40px 20px;
 }
 
+.menu-img {
+  border-radius: 0px;
+  overflow: visible;
+  bottom: -20px;
+}
+
 .menu {
   background-color: #f7f7f7;
-  border-radius: 45px;
+  border-radius: 45px 45px 0px 0px;
   padding-top: 15px;
   position: relative;
-  top: -50px;
 }
 .menu .menu-title {
   font-family: "Shrikhand", cursive;
@@ -201,11 +224,18 @@ body {
   align-items: center;
 }
 .menu p {
-  margin: 5px;
+  margin: 0px;
   font-weight: lighter;
 }
 .menu .price {
   font-weight: 600;
+}
+.menu .btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  padding: 50px 0px;
 }
 
 .btn {

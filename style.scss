@@ -47,12 +47,16 @@ body{
     .img-header{
         padding: 0px;
     }
+
+    a{
+        color: #000;
+    }
 }
 
 .location{
     @include flex(center, center);
     background-color: $background-bis;
-    align-items: $align;
+    align-items: baseline;
 
     i{
         margin-right: 10px;
@@ -86,12 +90,21 @@ body{
     padding: 40px 20px;
 }
 
+.loading{
+
+}
+
+.menu-img{
+    border-radius: 0px;
+    overflow: visible;
+    bottom: -20px;
+}
+
 .menu{
     background-color: $background;
-    border-radius: 45px;
+    border-radius: 45px 45px 0px 0px;
     padding-top: 15px;
     position: relative;
-    top: -50px;
 
     .menu-title{
         font-family: 'Shrikhand', cursive;
@@ -124,12 +137,19 @@ body{
     }
 
     p{
-        margin: 5px;
+        margin: 0px;
         font-weight: lighter;
     }
 
     .price{
         font-weight: 600;
+    }
+
+    .btn{
+    
+        width: max-content;
+        margin: auto;
+        padding: 50px 0px;
     }
 }
 
@@ -151,7 +171,7 @@ body{
 
     .position{
         display: flex;
-        align-items: $align;
+        align-items: baseline;
     }
 
     p{
