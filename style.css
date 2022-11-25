@@ -118,6 +118,97 @@
   margin: 0px;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  99% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  99% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #353535;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  -webkit-animation: rotation;
+          animation: rotation;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card__image-loading {
+  -webkit-animation: 7s ease 0s normal forwards 1 fadein;
+          animation: 7s ease 0s normal forwards 1 fadein;
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0, 2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0, 2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.badge {
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+          animation: 5s ease 0s normal forwards 1 fadein;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0, 2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: "Roboto";
   margin-right: auto;
