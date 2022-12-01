@@ -1,0 +1,11 @@
+span{
+    width: 0%;
+    display: block;
+    overflow: hidden;
+    transition: width 350ms;
+    height: 100%;
+}
+
+button:focus span{
+    width: 100%;
+}

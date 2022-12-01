@@ -13,40 +13,36 @@
 }
 
 .loading{
-    width: 50px;
-    height: 50px;
-    border: 5px solid $background-footer;
+    width: 150px;
+    height: 150px;
+    border: 5px solid $primary;
     border-bottom-color: transparent;
     border-radius: 50%;
     position: absolute;
-    top: 80px;
-    left: 150px;
+    top: 65px;
+    left: 125px;
     animation: rotation;
-    animation-duration: 750ms;
+    animation-duration: 550ms;
     animation-timing-function: linear;
     animation-delay: 0ms;
-    animation-iteration-count: 5;
+    animation-iteration-count: 4;
     animation-fill-mode: forwards;
 
     
 }
 
-.card__image-loading{
-    animation: 7s ease 0s normal forwards 1 fadein;
-
-        @keyframes fadein{
-            0% {opacity: 0;}
-            50% {opacity: 0,2;}
-            100% {opacity: 1;}
-        }
+@keyframes fadein{
+    0% {opacity: 0;}
+    50% {opacity: 0,2;}
+    100% {opacity: 1;}
 }
 
-.badge{
-    animation: 5s ease 0s normal forwards 1 fadein;
-
-        @keyframes fadein{
-            0% {opacity: 0;}
-            40% {opacity: 0,2;}
-            100% {opacity: 1;}
-        }
+#app{
+    animation: fadein;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+    animation-fill-mode: forwards;
 }

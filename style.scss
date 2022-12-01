@@ -3,7 +3,6 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiaire: #99E2D0;
 $background: #f7f7f7;
-$background-bis: #eaeaea;
 $background-footer:#353535;
 $shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
 $logo: scale(1.50);
@@ -24,6 +23,7 @@ $logo: scale(1.50);
 //@import
 @import "css/_partials/card";
 @import "css/_partials/loading-spinner";
+@import "css/_partials/anim-like";
 
 
 body{
@@ -31,6 +31,11 @@ body{
     margin-right: auto;
     margin-left: auto;
     margin: 0px;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
 }
 
 #main-header{
@@ -47,15 +52,11 @@ body{
     .img-header{
         padding: 0px;
     }
-
-    a{
-        color: #000;
-    }
 }
 
 .location{
     @include flex(center, center);
-    background-color: $background-bis;
+    background-color: #eaeaea;
     align-items: baseline;
 
     i{
@@ -172,6 +173,10 @@ body{
 
     p{
         margin: 5px;
+    }
+
+    a{
+        color: white;
     }
 
     .position p{

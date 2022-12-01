@@ -1,6 +1,7 @@
 $card-radius: 25px;
 $card-shadow: 0px 3px 15px rgba(#000, 0.3);
 $card-bg-color: #fff;
+$card-color-icon : #7e7e7e;
 
 
 @mixin card($bg-color: $card-bg-color, $border-radius: $card-radius, $box-shadow: $card-shadow){
@@ -16,7 +17,7 @@ $card-bg-color: #fff;
     position: relative;
 
     &.card-function{
-        background-color: #f7f7f7;
+        background-color: $background;
         width: 70%;
         margin-right: auto;
         margin-left: auto;
@@ -24,7 +25,7 @@ $card-bg-color: #fff;
         .card__number{
             background-color: $primary;
             border-radius: 50%;
-            color: white;
+            color: $card-bg-color;
             padding: 0px 10px;
             position: absolute;
             left: -15px;
@@ -52,20 +53,60 @@ $card-bg-color: #fff;
 
         .icon-color{
             color: $primary;
-        }
-    }
-
-    .card__icon{
-        color: #7e7e7e;
-        padding-right: 20px;
-        width: 30px;
-        display: flex;
-        justify-content: center;
-
-        i{
             font-size: 20px;
         }
     }
+
+
+    .card__icon{
+        position: relative;
+        display: block;
+        bottom: -5px;
+        width: 30px;
+        height: 30px;
+
+
+        .icon-color-neutral{
+            font-size: 20px;
+            color: $card-color-icon;
+        }
+    }
+
+    .card__icon-heart{
+
+        position: absolute;
+        bottom: 19px;
+        right: 25px;
+        
+        button{
+            background-color: #fff;
+            position: relative;
+            border: none;
+            width: 25px;
+            height: 25px;
+        }
+
+        i{
+            font-size: 25px;
+
+        }
+
+        button > * {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .fa-solid{
+            background: linear-gradient($primary, $secondary);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
 
     &.card-restaurant{
         flex-direction: column;
@@ -74,13 +115,9 @@ $card-bg-color: #fff;
 
         a{
             width: 100%;
-            text-decoration: none;
-            color: black;
         }
 
         .card__content{
-            @include flex(space-between, center);
-            width: 100%;
             padding-left: 10px;
         
             .card__heading{
