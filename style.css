@@ -56,35 +56,6 @@
   font-size: 20px;
   color: #7e7e7e;
 }
-.card .card__icon-heart {
-  position: absolute;
-  bottom: 19px;
-  right: 25px;
-}
-.card .card__icon-heart button {
-  background-color: #fff;
-  position: relative;
-  border: none;
-  width: 25px;
-  height: 25px;
-}
-.card .card__icon-heart i {
-  font-size: 25px;
-}
-.card .card__icon-heart button > * {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-.card .card__icon-heart .fa-solid {
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 .card.card-restaurant {
   flex-direction: column;
   width: 93%;
@@ -243,6 +214,109 @@ button:focus span {
   width: 100%;
 }
 
+.card__icon-heart {
+  position: absolute;
+  bottom: 19px;
+  right: 25px;
+}
+.card__icon-heart button {
+  background-color: #fff;
+  position: relative;
+  border: none;
+  width: 25px;
+  height: 25px;
+}
+.card__icon-heart i {
+  font-size: 25px;
+}
+.card__icon-heart button > * {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.card__icon-heart .fa-solid {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 0;
+    width: 70%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 80%;
+  }
+  100% {
+    opacity: 1;
+    width: 90%;
+  }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    width: 70%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 80%;
+  }
+  100% {
+    opacity: 1;
+    width: 90%;
+  }
+}
+.delay-0 {
+  -webkit-animation-name: appearance;
+          animation-name: appearance;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-1 {
+  -webkit-animation-name: appearance;
+          animation-name: appearance;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-2 {
+  -webkit-animation-name: appearance;
+          animation-name: appearance;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-3 {
+  -webkit-animation-name: appearance;
+          animation-name: appearance;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
 body {
   font-family: "Roboto";
   margin-right: auto;
@@ -296,14 +370,22 @@ a {
 }
 
 .button {
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 25px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
   color: white;
   padding: 15px;
   font-size: 16px;
   border: none;
   width: 250px;
+  cursor: pointer;
+  background-color: #686868;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  transition-duration: 250ms;
+}
+
+.button:hover {
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
 }
 
 .title__head {
@@ -380,20 +462,22 @@ a {
 }
 #main-footer .text-logo {
   font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+#main-footer .text-footer {
+  display: flex;
+  flex-direction: column;
 }
 #main-footer .position {
   display: flex;
   align-items: baseline;
 }
-#main-footer p {
-  margin: 5px;
-}
 #main-footer a {
   color: white;
+  margin: 5px;
 }
-#main-footer .position p {
+#main-footer .position a {
   padding-left: 10px;
-}
-#main-footer .text-footer {
-  padding-top: 10px;
 }/*# sourceMappingURL=style.css.map */

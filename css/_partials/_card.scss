@@ -72,42 +72,6 @@ $card-color-icon : #7e7e7e;
         }
     }
 
-    .card__icon-heart{
-
-        position: absolute;
-        bottom: 19px;
-        right: 25px;
-        
-        button{
-            background-color: #fff;
-            position: relative;
-            border: none;
-            width: 25px;
-            height: 25px;
-        }
-
-        i{
-            font-size: 25px;
-
-        }
-
-        button > * {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-        }
-
-        .fa-solid{
-            background: linear-gradient($primary, $secondary);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-    }
-    
-
     &.card-restaurant{
         flex-direction: column;
         width: 93%;
@@ -174,10 +138,3 @@ $card-color-icon : #7e7e7e;
         }
     }
 }
-
-
-
-
-
-
-
