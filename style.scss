@@ -20,11 +20,17 @@ $logo: scale(1.50);
     align-items: $align-items;
 }
 
+@mixin lightness($background-color, $box-shadow) {
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+}
+
 //@import
 @import "css/_partials/card";
 @import "css/_partials/loading-spinner";
 @import "css/_partials/anim-like";
 @import "css/_partials/appearance-card";
+@import "css/_partials/validation_cards";
 
 
 body{
@@ -79,12 +85,6 @@ a{
     }
 }
 
-@mixin lightness($background-color, $box-shadow) {
-    background-color: $background-color;
-    box-shadow: $box-shadow;
-}
-
-
 .button{
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     border-radius: 25px;
@@ -94,11 +94,11 @@ a{
     cursor: pointer;
     @include lightness(#686868, $shadow);
     transition-duration: 250ms;
-}
 
-.button:hover{
-    @include lightness(#fff, 0px 3px 15px rgba(0, 0, 0, 0.6))
-    
+    &:hover{
+        @include lightness(#fff, 0px 3px 15px rgba(0, 0, 0, 0.6))
+        
+    }
 }
 
 .title__head{
@@ -143,17 +143,20 @@ a{
         margin: 0px;
     }
 
-    .menu-text{
-        @include flex(space-between, center);
-    }
-
     p{
         margin: 0px;
         font-weight: lighter;
     }
 
+    .menu-text p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        overflow-wrap: nowrap;
+    }
+
     .price{
-        font-weight: 600;
+        font-weight: 700;
+        transition-duration: 500ms;
     }
 
     .btn{
@@ -164,12 +167,6 @@ a{
     }
 }
 
-.btn{
-    
-    width: max-content;
-    margin: auto;
-    padding: 50px 0px;
-}
 
 //css footer/////////////////////////////////////////////////////////////
 

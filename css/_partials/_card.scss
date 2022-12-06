@@ -105,9 +105,18 @@ $card-color-icon : #7e7e7e;
         padding: 10px 10px;
         display: block;
         border-radius: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+
+        .disposition-cards{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
     }
 }
-
 .card__image{
     overflow: hidden;
     position: relative;
