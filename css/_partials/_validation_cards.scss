@@ -2,9 +2,9 @@
     background-color: #99e2d0;
     position: absolute;
     right: -82px;
-    height: 150%;
-    bottom: -10px;
-    width: 20%;
+    height: 72px;
+    bottom: -14px;
+    width: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,9 +14,11 @@
         color: #fff;
         font-size: 28px;
         transform: rotate(0);
+
         transition-duration: 500ms;
     }
 }
+
 
 .disposition-cards:focus .validation-cards{
     right: -11px;
@@ -32,5 +34,7 @@
 }
 
 .disposition-cards:focus .menu-text{
-    width: 150px;
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

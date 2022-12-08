@@ -14,6 +14,16 @@
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-width: 768px) {
+  .card.card-function {
+    width: 29%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card.card-function {
+    width: 30%;
+  }
+}
 .card.card-function .card__number {
   background-color: #9356DC;
   border-radius: 50%;
@@ -38,12 +48,24 @@
   width: 100%;
   padding-left: 30px;
 }
-.card.card-function .card-forme-color {
-  background-color: #f5edff;
+@media screen and (min-width: 768px) {
+  .card.card-function {
+    padding-left: 24px;
+  }
 }
 .card.card-function .icon-color {
   color: #9356DC;
   font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .card.card-function .card__heading--size {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card.card-function .card__heading--size {
+    padding-left: 10px;
+  }
 }
 .card .card__icon {
   position: relative;
@@ -60,6 +82,13 @@
   flex-direction: column;
   width: 93%;
   margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .card.card-restaurant {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .card.card-restaurant a {
   width: 100%;
@@ -78,6 +107,7 @@
 }
 .card.menu-card {
   width: 90%;
+  max-height: 45px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -92,6 +122,10 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+.card.menu-card .disposition-cards .menu-text > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__image {
@@ -122,6 +156,14 @@
   margin: 0px;
 }
 
+@media screen and (min-width: 900px) {
+  .card-restaurant-position {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 5%;
+    justify-content: center;
+  }
+}
 @-webkit-keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -134,7 +176,6 @@
     opacity: 0;
   }
 }
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -144,6 +185,44 @@
   }
   100% {
     transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes transparent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes transparent {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -169,30 +248,35 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0, 2;
-  }
-  100% {
-    opacity: 1;
+@media screen and (min-width: 768px) {
+  .loading {
+    left: 323px;
+    top: 126px;
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0, 2;
-  }
-  100% {
-    opacity: 1;
+.spinner {
+  font-size: 17px;
+  color: #99E2D0;
+  font-family: "Shrikhand";
+  position: absolute;
+  top: 115px;
+  right: 144px;
+  -webkit-animation: transparent;
+          animation: transparent;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media screen and (min-width: 768px) {
+  .spinner {
+    top: 165px;
+    right: 345px;
+    font-size: 20px;
   }
 }
+
 #app {
   -webkit-animation: fadein;
           animation: fadein;
@@ -329,9 +413,9 @@ button:focus span {
   background-color: #99e2d0;
   position: absolute;
   right: -82px;
-  height: 150%;
-  bottom: -10px;
-  width: 20%;
+  height: 72px;
+  bottom: -14px;
+  width: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,7 +441,9 @@ button:focus span {
 }
 
 .disposition-cards:focus .menu-text {
-  width: 150px;
+  width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body {
@@ -365,6 +451,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin: 0px;
+}
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 1400px;
+  }
 }
 
 a {
@@ -380,12 +471,14 @@ a {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
   position: relative;
 }
-#main-header img {
-  width: 50%;
-  padding-right: 50px;
-}
 #main-header .img-header {
-  padding: 0px;
+  width: 50%;
+}
+@media screen and (max-width: 1400px) {
+  #main-header .img-header {
+    width: 25%;
+    padding-left: 25px;
+  }
 }
 
 .location {
@@ -401,17 +494,31 @@ a {
 
 .grid {
   background-color: #f7f7f7;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
 }
 
 .grid-text {
   text-align: center;
   padding: 60px;
 }
+@media screen and (min-width: 900px) {
+  .grid-text {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .grid-text p {
   padding: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .grid-text h1 {
+    font-size: 30px;
+  }
+  .grid-text p {
+    font-size: 18px;
+  }
+}
 .button {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 25px;
@@ -430,10 +537,28 @@ a {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (min-width: 768px) {
+  .button {
+    width: 375px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .button {
+    width: 350px;
+    height: 50px;
+    margin-top: 35px;
+  }
+}
 .title__head {
   padding: 40px 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .card__position {
+    display: flex;
+  }
+}
 .menu-img {
   border-radius: 0px;
   overflow: visible;
@@ -473,11 +598,6 @@ a {
   margin: 0px;
   font-weight: lighter;
 }
-.menu .menu-text p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  overflow-wrap: nowrap;
-}
 .menu .price {
   font-weight: 700;
   transition-duration: 500ms;
@@ -501,9 +621,21 @@ a {
   margin: 0px;
   padding-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  #main-footer .text-logo {
+    text-align: center;
+  }
+}
 #main-footer .text-footer {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  #main-footer .text-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
 }
 #main-footer .position {
   display: flex;

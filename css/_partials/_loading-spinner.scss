@@ -12,6 +12,17 @@
     }
 }
 
+@keyframes fadein{
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes transparent{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 .loading{
     width: 150px;
     height: 150px;
@@ -26,15 +37,31 @@
     animation-timing-function: linear;
     animation-delay: 0ms;
     animation-iteration-count: 4;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
 
-    
+    @media screen and (min-width: 768px) {
+        left: 323px;
+        top: 126px;    
+    }
 }
 
-@keyframes fadein{
-    0% {opacity: 0;}
-    50% {opacity: 0,2;}
-    100% {opacity: 1;}
+
+.spinner{
+    font-size: 17px;
+    color: $tertiaire;
+    font-family: 'Shrikhand';
+    position: absolute;
+    top: 115px;
+    right: 144px;
+    animation: transparent;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+    @media screen and (min-width: 768px) {
+        top: 165px;
+        right: 345px; 
+        font-size: 20px;     
+    }
 }
 
 #app{

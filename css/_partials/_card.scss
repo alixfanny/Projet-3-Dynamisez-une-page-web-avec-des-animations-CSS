@@ -22,6 +22,14 @@ $card-color-icon : #7e7e7e;
         margin-right: auto;
         margin-left: auto;
 
+        @media screen and (min-width: 768px) {
+            width: 29%;
+        }
+
+        @media screen and (min-width:900px) {
+            width: 30%;
+        }
+
         .card__number{
             background-color: $primary;
             border-radius: 50%;
@@ -47,13 +55,29 @@ $card-color-icon : #7e7e7e;
             padding-left: 30px;
         }
 
-        .card-forme-color{
-            background-color: #f5edff;
+        @media screen and (min-width: 768px) {
+            padding-left: 24px;
+        }
+
+        @media screen and (min-width: 900px) {
+            
         }
 
         .icon-color{
             color: $primary;
             font-size: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .card__heading--size{
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .card__heading--size{
+                padding-left: 10px;
+            }
         }
     }
 
@@ -77,6 +101,12 @@ $card-color-icon : #7e7e7e;
         width: 93%;
         margin-left: 15px;
 
+        @media screen and (min-width: 768px) {
+         width: 70%;
+         margin-left: auto;
+         margin-right: auto;   
+        }
+
         a{
             width: 100%;
         }
@@ -99,6 +129,7 @@ $card-color-icon : #7e7e7e;
 
     &.menu-card{
         width: 90%;
+        max-height: 45px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
@@ -114,6 +145,11 @@ $card-color-icon : #7e7e7e;
             justify-content: space-between;
             align-items: flex-end;
             position: relative;
+
+            .menu-text > *{
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
 }
@@ -145,5 +181,14 @@ $card-color-icon : #7e7e7e;
             font-size: 14px;
             margin: 0px;
         }
+    }
+}
+
+@media screen and (min-width:900px){
+    .card-restaurant-position{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 5%;
+    justify-content: center;
     }
 }

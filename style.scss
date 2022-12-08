@@ -38,6 +38,10 @@ body{
     margin-right: auto;
     margin-left: auto;
     margin: 0px;
+
+    @media screen and (min-width: 900px) {
+        max-width: 1400px;
+    }
 }
 
 a{
@@ -51,13 +55,12 @@ a{
     box-shadow: $shadow;
     position: relative;
 
-    img{
-        width: 50%;
-        padding-right: 50px;
-    }
-
     .img-header{
-        padding: 0px;
+        width: 50%;
+        @media screen and (max-width: 1400px) {
+            width: 25%;
+            padding-left: 25px;
+        }
     }
 }
 
@@ -73,16 +76,35 @@ a{
 
 .grid{
     background-color: $background;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
 }
 
 .grid-text{
     text-align: center;
     padding: 60px;
 
+    @media screen and (min-width:900px) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
     p{
         padding: 20px;
     }
+}
+
+@media screen and (min-width:768px) {
+    .grid-text{
+
+        h1{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    } 
 }
 
 .button{
@@ -101,8 +123,29 @@ a{
     }
 }
 
+@media screen and (min-width: 768px) {
+    .button{
+        width: 375px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .button{
+        width: 350px;
+        height: 50px;
+        margin-top: 35px;
+    }
+}
+
 .title__head{
     padding: 40px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .card__position{
+        display: flex;
+    }
 }
 
 .menu-img{
@@ -148,12 +191,6 @@ a{
         font-weight: lighter;
     }
 
-    .menu-text p{
-        text-overflow: ellipsis;
-        overflow: hidden;
-        overflow-wrap: nowrap;
-    }
-
     .price{
         font-weight: 700;
         transition-duration: 500ms;
@@ -166,7 +203,6 @@ a{
         padding: 50px 0px;
     }
 }
-
 
 //css footer/////////////////////////////////////////////////////////////
 
@@ -182,9 +218,23 @@ a{
         padding-bottom: 10px;
     }
 
+    @media screen and (min-width: 768px) {
+            .text-logo{
+                text-align: center;
+            }
+    }
+
     .text-footer{
         display: flex;
         flex-direction: column;
+    }
+
+    @media screen and (min-width: 768px) {
+            .text-footer{
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 20px;
+            }
     }
 
     .position{
