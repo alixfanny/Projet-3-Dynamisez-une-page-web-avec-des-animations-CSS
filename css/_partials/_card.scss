@@ -53,14 +53,10 @@ $card-color-icon : #7e7e7e;
             border-radius: 15px;
             width: 100%;
             padding-left: 30px;
-        }
 
-        @media screen and (min-width: 768px) {
-            padding-left: 24px;
-        }
-
-        @media screen and (min-width: 900px) {
-            
+            @media screen and (min-width:768px) {
+                padding-left: 22px;
+            }
         }
 
         .icon-color{
@@ -89,6 +85,9 @@ $card-color-icon : #7e7e7e;
         width: 30px;
         height: 30px;
 
+        @media screen and (min-width:768px) {
+            width: 25px;
+        }
 
         .icon-color-neutral{
             font-size: 20px;
@@ -160,12 +159,21 @@ $card-color-icon : #7e7e7e;
     height: 200px;
     border-radius: 15px 15px 0px 0px;
 
+    @media screen and (min-width: 768px) {
+        height: 400px;
+    }
+
     img{
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        max-width: 100%;
+        width: 100%;
+
+        @media screen and (min-width: 900px) {
+            width: 133%;
+        }
+
     }
 
     .badge{
@@ -190,5 +198,6 @@ $card-color-icon : #7e7e7e;
     grid-template-columns: 40% 40%;
     gap: 5%;
     justify-content: center;
+    padding-bottom: 45px;
     }
 }

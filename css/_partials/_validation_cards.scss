@@ -35,6 +35,7 @@
 
 .disposition-cards:focus .menu-text{
     width: 190px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
