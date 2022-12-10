@@ -23,44 +23,42 @@
     100% {opacity: 0;}
 }
 
-.loading{
-    width: 150px;
-    height: 150px;
-    border: 5px solid $primary;
-    border-bottom-color: transparent;
-    border-radius: 50%;
+.anim-loading-spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 65px;
-    left: 125px;
-    animation: rotation;
-    animation-duration: 550ms;
-    animation-timing-function: linear;
-    animation-delay: 0ms;
-    animation-iteration-count: 4;
-    animation-fill-mode: forwards; 
+    width: 100%;
+    top: 14%;
 
-    @media screen and (min-width: 768px) {
-        left: 323px;
-        top: 126px;    
+
+    .loading{
+        width: 150px;
+        height: 150px;
+        border: 5px solid $primary;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        animation: rotation;
+        animation-duration: 550ms;
+        animation-timing-function: linear;
+        animation-delay: 0ms;
+        animation-iteration-count: 4;
+        animation-fill-mode: forwards;
     }
-}
 
-
-.spinner{
+    .spinner{
     font-size: 17px;
     color: $tertiaire;
     font-family: 'Shrikhand';
     position: absolute;
-    top: 115px;
-    right: 144px;
     animation: transparent;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 
     @media screen and (min-width: 768px) {
-        top: 165px;
-        right: 345px; 
         font-size: 20px;     
+    }
     }
 }
 

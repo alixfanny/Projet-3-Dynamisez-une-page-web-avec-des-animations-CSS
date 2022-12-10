@@ -26,7 +26,7 @@ $card-color-icon : #7e7e7e;
             width: 29%;
         }
 
-        @media screen and (min-width:900px) {
+        @media screen and (min-width:992px) {
             width: 30%;
         }
 
@@ -59,6 +59,10 @@ $card-color-icon : #7e7e7e;
             }
         }
 
+        .card-forme-color{
+            background-color: #f5edff;
+        }
+
         .icon-color{
             color: $primary;
             font-size: 20px;
@@ -70,7 +74,7 @@ $card-color-icon : #7e7e7e;
             }
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 992px) {
             .card__heading--size{
                 padding-left: 10px;
             }
@@ -104,6 +108,10 @@ $card-color-icon : #7e7e7e;
          width: 70%;
          margin-left: auto;
          margin-right: auto;   
+        }
+
+        @media screen and (min-width: 992px) {
+            width: 90%;
         }
 
         a{
@@ -163,6 +171,10 @@ $card-color-icon : #7e7e7e;
         height: 400px;
     }
 
+    @media screen and (min-width: 992px) {
+        height: 200px;
+    }
+
     img{
         position: absolute;
         transform: translate(-50%, -50%);
@@ -170,7 +182,11 @@ $card-color-icon : #7e7e7e;
         left: 50%;
         width: 100%;
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 768px) {
+            width: 125%;
+        }
+
+        @media screen and (min-width: 992px) {
             width: 133%;
         }
 
@@ -192,7 +208,7 @@ $card-color-icon : #7e7e7e;
     }
 }
 
-@media screen and (min-width:900px){
+@media screen and (min-width:992px){
     .card-restaurant-position{
     display: grid;
     grid-template-columns: 40% 40%;
