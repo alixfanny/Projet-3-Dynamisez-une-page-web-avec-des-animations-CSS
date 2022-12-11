@@ -46,22 +46,33 @@ a{
 }
 
 #main-header{
-    @include flex(start, center);
-    padding: 30px 0px;
+    padding: 20px 0px;
     box-shadow: $shadow;
     position: relative;
+    text-align: center;
+}
 
-    .img-header{
-        width: 50%;
-        padding-left: 25%;
 
-        @media screen and (min-width:992px) {
-            width: 46%;
-            padding-left: 23%;
+.header-text-logo{
+    font-family: 'Shrikhand', cursive;
+    margin: 0px;
+    font-size: 40px;
+}
+
+#main-header-menu{
+    @include flex(start, baseline);
+    padding: 20px 0px;
+
+    p{
+        flex: 3;
+
+        @media screen and (min-width: 768px) {
+            flex: 2;
         }
     }
 
     .return{
+        flex: 1;
         padding-left: 20px;
 
         @media screen and (min-width: 576px) {
@@ -78,10 +89,12 @@ a{
     }
 }
 
+
 .location{
     @include flex(center, center);
     background-color: #eaeaea;
     align-items: baseline;
+    color: $background-footer;
 
     i{
         margin-right: 10px;
@@ -105,11 +118,7 @@ a{
 
 
     p{
-        padding: 20px;
-
-        @media screen and (min-width:992px) {
-            padding-left: 0px;
-        }
+        padding-bottom: 20px;
     }
 
     .text-position{
@@ -131,28 +140,41 @@ a{
     @include lightness(#686868, $shadow);
     transition-duration: 250ms;
 
+    .text-button{
+        padding: 0px;
+        margin: 0px;
+    }
+
     &:hover{
         @include lightness(#fff, 0px 3px 15px rgba(0, 0, 0, 0.6))
-        
     }
-}
 
-@media screen and (min-width: 768px) {
-    .button{
+    &:hover .text-button{
+        text-shadow: 0px 1.5px 1.5px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (min-width: 768px) {
         width: 375px;
         font-size: 18px;
     }
-}
 
-@media screen and (min-width: 992px) {
-    .button{
+    @media screen and (min-width: 992px) {
         width: 350px;
         height: 50px;
     }
 }
 
+.grid__card{
+    padding-left: 20px;
+}
+
+.grid-restaurant{
+    padding-left: 20px;
+}
+
 .title__head{
-    padding: 40px 20px;
+    padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -175,16 +197,16 @@ a{
     position: relative;
     top: -42px;
     margin-bottom: -42px;
+    padding-left: 15px;
 
     .menu-title{
         font-family: 'Shrikhand', cursive;
         @include flex(space-between, center);
-        margin: 0px 15px;
     }
 
     .menu-title i{
         transform: $logo;
-        padding-right: 3%;
+        padding-right: 5%;
     }
 
     .menu-title h1{
@@ -197,7 +219,6 @@ a{
         border-bottom: $tertiaire 2px solid ;
         width: 10%;
         margin-top: 35px;
-        padding-left: 1%;
     }
 
     h2{
@@ -217,7 +238,9 @@ a{
 
     .price{
         font-weight: 700;
-        transition-duration: 500ms;
+        transition: right 500ms;
+        position: relative;
+        right: 0px;
     }
 
     .btn{
@@ -233,7 +256,7 @@ a{
 #main-footer{
     background-color: $background-footer;
     color: white;
-    padding: 25px;
+    padding: 20px;
 
     .text-logo{
         font-family: 'Shrikhand', cursive;
@@ -245,12 +268,8 @@ a{
     @media screen and (min-width: 768px) {
             .text-logo{
                 text-align: center;
+                font-size: 22px;
             }
-    }
-
-    .text-footer{
-        display: flex;
-        flex-direction: column;
     }
 
     @media screen and (min-width: 768px) {
@@ -262,17 +281,14 @@ a{
             }
     }
 
-    .position{
-        display: flex;
-        align-items: baseline;
-    }
-
     a{
         color: white;
-        margin: 5px;
+        display: flex;
+        align-items: baseline;
+        padding-bottom: 5px;
     }
 
-    .position a{
-        padding-left: 10px;
+    p{
+        margin: 5px;
     }
 }
