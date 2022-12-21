@@ -7,79 +7,80 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" 
+			rel="stylesheet"> 
 		<title>ohmyfood</title>
 		
 	</head>
 
 	<body>
 		<div id="app">
-			<header id="main-header">
+			<header id="main__header">
 				<p class="header-text-logo">ohmyfood</p>
 			</header>
 
 			<main>
 				<section class="grid">
-					<div class="location">
+					<div class="localisation">
 						<i class="fa-solid fa-location-dot"></i>
 						<p>Paris, Belleville</p>
 					</div>
 
-					<div class="grid-text">
+					<div class="grid__text">
 						<div class="text-position">
 							<h1>Réservez le menu qui vous convient</h1>
 							<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
 						</div>
 						<div class="media-button">
 							<button class="button" type="button">
-								<p class="text-button">Explorer nos restaurants</p>
+								<span class="text-button">Explorer nos restaurants</span>
 							</button>
 						</div>
 					</div>
 				</section>
 
 				<section class="grid__card">
-					<h2 class="title__head">Fonctionnement</h2>
+					<h2 class="title-head">Fonctionnement</h2>
 
 					<div class="card__position">
-						<article class="card card-function">
+						<article class="card card__function">
 							<div class="card__number">
 								<p>1</p>
 							</div>
-							<div class="card-forme">
+							<div class="card__forme">
 								<div class="card__icon">
 									<i class="fa-solid fa-mobile-screen-button icon-color-neutral"></i>
 								</div>
 
-								<div class="card__heading card__heading--size">
+								<div class="card__heading__size">
 									<p>Choisissez un restaurant</p>
 								</div>
 							</div>
 						</article>
-						<article class="card card-function">
+						<article class="card card__function">
 							<div class="card__number">
 								<p>2</p>
 							</div>
-							<div class="card-forme">
+							<div class="card__forme">
 								<div class="card__icon">
 									<i class="fa-solid fa-list-ul icon-color-neutral"></i>
 								</div>
 
-								<div class="card__heading card__heading--size">
+								<div class="card__heading__size">
 									<p>Composez votre menu</p>
 								</div>
 							</div>
 						</article>
-						<article class="card card-function">
+						<article class="card card__function">
 							<div class="card__number">
 								<p>3</p>
 							</div>
-							<div class="card-forme card-forme-color">
+							<div class="card__forme">
 								<div class="card__icon">
-									<i class="fa-solid fa-store icon-color"></i>
+									<i class="fa-solid fa-store icon-color-neutral"></i>
 								</div>
 
-								<div class="card__heading card__heading--size">
+								<div class="card__heading__size">
 									<p>Dégustez au restaurant</p>
 								</div>
 							</div>
@@ -87,26 +88,27 @@
 					</div>
 				</section>
 
-				<section class=" grid grid-restaurant">
-				<h2 class="title__head">Restaurants</h2>
-				<div class="card-restaurant-position">
-					<article class="card card-restaurant">
+				<section class=" grid grid__restaurant">
+				<h2 class="title-head">Restaurants</h2>
+
+				<div class="card__restaurant__position">
+					<article class="card card__restaurant">
 						<a href="la-palette-du-gout.html">
 							<div class="card__image">
-								<img src="images/restaurants/jay-wennington.jpg">
+								<img src="images/restaurants/jay-wennington.jpg" alt="photo-la-palette-du-gout">
 								<div class="badge">
 									<p>Nouveau</p>
 								</div>
 							</div>
 							<div class="card__content">
 								<div>
-									<h3 class="card__heading" id="test">La palette du goût</h3>
-									<p class="card__byline">Ménilmontant</p>
+									<h3 class="card-heading" id="test">La palette du goût</h3>
+									<p class="card-byline">Ménilmontant</p>
 								</div>
 							</div>
 						</a>
 						
-						<div class="card__icon-heart">
+						<div class="card__icon__heart">
 							<button type="button">
 								<i class="fa-regular fa-heart"></i>
 								<span>
@@ -115,23 +117,23 @@
 							</button>
 						</div>
 					</article>
-					<article class="card card-restaurant">
+					<article class="card card__restaurant">
 						<a href="la-note-enchantée.html">
 							<div class="card__image">
-								<img src="images/restaurants/stil.jpg">
+								<img src="images/restaurants/stil.jpg" alt="photo-la-note-enchantée">
 								<div class="badge">
 									<p>Nouveau</p>
 								</div>
 							</div>
 							<div class="card__content">
 								<div>
-									<h3 class="card__heading">La note enchantée</h3>
-									<p class="card__byline">Charonne</p>
+									<h3 class="card-heading">La note enchantée</h3>
+									<p class="card-byline">Charonne</p>
 								</div>
 							</div>
 						</a>
 
-						<div class="card__icon-heart">
+						<div class="card__icon__heart">
 							<button type="button">
 								<i class="fa-regular fa-heart"></i>
 								<span>
@@ -140,20 +142,20 @@
 							</button>
 						</div>
 					</article>
-					<article class="card card-restaurant">
+					<article class="card card__restaurant">
 						<a href="a-la-francaise.html">
 							<div class="card__image">
-								<img src="images/restaurants/toa-heftiba.jpg">
+								<img src="images/restaurants/toa-heftiba.jpg" alt="photo-a-la-francaise">
 							</div>
 
 							<div class="card__content">
 								<div>
-									<h3 class="card__heading">À la française</h3>
-									<p class="card__byline">Cité Rouge</p>
+									<h3 class="card-heading">À la française</h3>
+									<p class="card-byline">Cité Rouge</p>
 								</div>
 							</div>
 						</a>
-						<div class="card__icon-heart">
+						<div class="card__icon__heart">
 							<button type="button">
 								<i class="fa-regular fa-heart"></i>
 								<span>
@@ -162,19 +164,19 @@
 							</button>
 						</div>
 					</article>
-					<article class="card card-restaurant">
+					<article class="card card__restaurant">
 						<a href="le-delice-des-sens.html">
 							<div class="card__image">
-								<img src="images/restaurants/louis-hansel-shotsoflouis.jpg">
+								<img src="images/restaurants/louis-hansel-shotsoflouis.jpg" alt="photo-le-délice-des-sens">
 							</div>
 							<div class="card__content">
 								<div>
-									<h3 class="card__heading">Le délice des sens</h3>
-									<p class="card__byline">Folie-Méricourt</p>
+									<h3 class="card-heading">Le délice des sens</h3>
+									<p class="card-byline">Folie-Méricourt</p>
 								</div>
 							</div>
 						</a>
-						<div class="card__icon-heart">
+						<div class="card__icon__heart">
 							<button type="button">
 								<i class="fa-regular fa-heart"></i>
 								<span>
@@ -188,9 +190,9 @@
 
 			</main>
 
-			<footer id="main-footer">
+			<footer id="main__footer">
 				<p class="text-logo">ohmyfood</p>
-				<div class="text-footer">
+				<div class="text__footer">
 					<div class="position">
 						<a href="#">
 							<i class="fa-solid fa-utensils"></i>
@@ -210,7 +212,7 @@
 				</div>			
 			</footer>
         </div>
-		<div class="anim-loading-spinner">
+		<div class="anim__loading__spinner">
 			<div class="loading"></div>
 			<p class="spinner">ohmyfood</p>
 		</div>

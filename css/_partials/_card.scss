@@ -16,11 +16,15 @@ $card-color-icon : #7e7e7e;
     margin-bottom: 30px;
     position: relative;
 
-    &.card-function{
+    &.card__function{
         background-color: $background;
         width: 92%;
         margin-right: auto;
         margin-left: auto;
+
+        &:hover .icon-color-neutral{
+                color: #9356dc;
+        }
 
         @media screen and (min-width: 768px) {
             width: 29%;
@@ -44,10 +48,14 @@ $card-color-icon : #7e7e7e;
             p{
                 position: relative;
                 top: -10px;
+
+                @media screen and (min-width: 992px) {
+                    top: -8px;
+            }
             }
         }
 
-        .card-forme{
+        .card__forme{
             @include flex(flex-start, center);
             background-color: $background;
             border-radius: 15px;
@@ -57,26 +65,27 @@ $card-color-icon : #7e7e7e;
             @media screen and (min-width:768px) {
                 padding-left: 22px;
             }
-        }
 
-        .card-forme-color{
-            background-color: #f5edff;
-        }
-
-        .icon-color{
-            color: $primary;
-            font-size: 20px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .card__heading--size{
-                font-size: 15px;
+            @media screen and (min-width: 992px) {
+                padding-left: 27px;
+            }
+            &:hover{
+                    background-color: #f5edff;
             }
         }
 
-        @media screen and (min-width: 992px) {
-            .card__heading--size{
-                padding-left: 10px;
+        .card__heading__size{
+
+            @media screen and (min-width: 768px) {
+                font-size: 15px;
+            }
+
+            @media screen and (min-width: 992px) {
+                font-size: 18px;
+        }
+
+            @media screen and (min-width: 992px) {
+                    padding-left: 10px;
             }
         }
     }
@@ -99,7 +108,7 @@ $card-color-icon : #7e7e7e;
         }
     }
 
-    &.card-restaurant{
+    &.card__restaurant{
         flex-direction: column;
         width: 96%;
 
@@ -122,11 +131,11 @@ $card-color-icon : #7e7e7e;
             padding: 10px;
             padding-bottom: 15px;
         
-            .card__heading{
+            .card-heading{
                 margin: 0px;
             }
         
-            .card__byline{
+            .card-byline{
                 font-weight: 300;
                 margin: 0px;
                 padding-top: 5px;
@@ -134,7 +143,7 @@ $card-color-icon : #7e7e7e;
         }
     }
 
-    &.menu-card{
+    &.menu__card{
         width: 90%;
         max-height: 45px;
         margin-top: 20px;
@@ -143,9 +152,13 @@ $card-color-icon : #7e7e7e;
         border-radius: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @media screen and (min-width:992px) {
+            width: 95%;
+        }
         
 
-        .disposition-cards{
+        .disposition__cards{
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -155,7 +168,7 @@ $card-color-icon : #7e7e7e;
                 padding: 0px 15px;
             }
 
-            .menu-text > *{
+            .menu__text > *{
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -211,7 +224,7 @@ $card-color-icon : #7e7e7e;
 }
 
 @media screen and (min-width:992px){
-    .card-restaurant-position{
+    .card__restaurant__position{
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 3%;

@@ -1,4 +1,4 @@
-.validation-cards{
+.validation__cards{
     background-color: #99e2d0;
     position: absolute;
     right: -82px;
@@ -20,7 +20,7 @@
 }
 
 
-.disposition-cards:focus .validation-cards{
+.disposition__cards:focus .validation__cards{
     right: -11px;
 
     i{
@@ -28,11 +28,11 @@
     }
 }
 
-.disposition-cards:focus .price{
+.disposition__cards:focus .price{
     right: 80px;
 }
 
-.disposition-cards:focus .menu-text{
+.disposition__cards:focus .menu__text{
     width: 190px;
     white-space: nowrap;
     overflow: hidden;
