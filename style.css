@@ -141,6 +141,7 @@
   border-radius: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .card.menu__card {
@@ -151,12 +152,21 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
+  border: none;
+  background-color: #fff;
+  font-family: "Roboto";
+  width: 100%;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .card.menu__card .disposition__cards {
     padding: 0px 15px;
   }
+}
+.card.menu__card .disposition__cards .menu__text {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 .card.menu__card .disposition__cards .menu__text > * {
   overflow: hidden;
@@ -352,7 +362,7 @@ span {
   height: 100%;
 }
 
-button:focus span {
+button:hover span {
   width: 100%;
 }
 
@@ -464,7 +474,7 @@ button:focus span {
   position: absolute;
   right: -82px;
   height: 72px;
-  bottom: -14px;
+  bottom: -6px;
   width: 65px;
   display: flex;
   justify-content: center;
@@ -479,7 +489,7 @@ button:focus span {
 }
 
 .disposition__cards:focus .validation__cards {
-  right: -11px;
+  right: -2px;
 }
 .disposition__cards:focus .validation__cards i {
   transform: rotate(360deg);
@@ -695,17 +705,18 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.menu .menu__title i {
+.menu .menu__title .card__icon__heart__menu {
+  position: unset;
   transform: scale(1.5);
   padding-right: 5%;
 }
 @media screen and (min-width: 768px) {
-  .menu .menu__title i {
+  .menu .menu__title .card__icon__heart__menu {
     padding-right: 6%;
   }
 }
 @media screen and (min-width: 992px) {
-  .menu .menu__title i {
+  .menu .menu__title .card__icon__heart__menu {
     padding-right: 3%;
   }
 }
@@ -725,10 +736,12 @@ a {
 }
 .menu h3 {
   margin: 0px;
+  font-size: 18px;
 }
 .menu p {
   margin: 0px;
   font-weight: lighter;
+  font-size: 15px;
 }
 .menu .price {
   font-weight: 700;

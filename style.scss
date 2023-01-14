@@ -228,7 +228,8 @@ a{
         @include flex(space-between, center);
     }
 
-    .menu__title i{
+    .menu__title .card__icon__heart__menu{
+        position: unset;
         transform: scale(1.50);
         padding-right: 5%;
 
@@ -260,11 +261,13 @@ a{
 
     h3{
         margin: 0px;
+        font-size: 18px;
     }
 
     p{
         margin: 0px;
         font-weight: lighter;
+        font-size: 15px;
     }
 
     .price{

@@ -3,7 +3,7 @@
     position: absolute;
     right: -82px;
     height: 72px;
-    bottom: -14px;
+    bottom: -6px;
     width: 65px;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
 
 
 .disposition__cards:focus .validation__cards{
-    right: -11px;
+    right: -2px;
 
     i{
         transform: rotate(360deg);
